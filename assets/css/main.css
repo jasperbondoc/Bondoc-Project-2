@@ -1558,121 +1558,101 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Testimonials Section
+# Vision and Mission Section
 --------------------------------------------------------------*/
-.testimonials .testimonial-wrap {
-  padding-left: 50px;
+.vision-mission {
+  background: var(--background-color);
 }
 
-.testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
-  overflow: hidden;
-}
-
-.testimonials .testimonial-item {
-  background-color: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  box-sizing: content-box;
-  padding: 30px 30px 30px 60px;
-  margin: 30px 15px;
-  min-height: 200px;
+.kcc-principle {
+  min-height: 360px;
+  display: flex;
+  align-items: flex-end;
   position: relative;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--heading-color), transparent 88%);
+  background-color: #10154c;
+  background-image:
+    linear-gradient(90deg, rgba(16, 21, 76, 0.97) 20%, rgba(16, 21, 76, 0.82) 100%),
+    url('../img/kcc/kcc-logo.png');
+  background-repeat: no-repeat;
+  background-position: right 48px center, right 32px center;
+  background-size: auto, 220px auto;
 }
 
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 10px;
-  border: 6px solid var(--background-color);
+.kcc-principle::before {
+  content: "";
   position: absolute;
-  left: -45px;
+  inset: 0;
+  border-right: 8px solid var(--accent-color);
+  pointer-events: none;
 }
 
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
+.principle-mission {
+  background-image:
+    linear-gradient(90deg, rgba(11, 14, 51, 0.97) 18%, rgba(11, 14, 51, 0.82) 100%),
+    url('../img/kcc/kcc-logo.png');
 }
 
-.testimonials .testimonial-item h4 {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 14px;
+.principle-content {
+  max-width: 65%;
+  padding: 38px 38px 42px;
+  position: relative;
+  z-index: 1;
+}
+
+.principle-label {
+  display: inline-block;
+  color: var(--accent-color);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.kcc-principle h3 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.kcc-principle p {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.75;
   margin: 0;
 }
 
-.testimonials .testimonial-item .stars {
-  margin: 10px 0;
-}
-
-.testimonials .testimonial-item .stars i {
-  color: #ffc107;
-  margin: 0 1px;
-}
-
-.testimonials .testimonial-item .quote-icon-left,
-.testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 60%);
-  font-size: 26px;
-  line-height: 0;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 15px auto 15px auto;
-}
-
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: var(--background-color);
-  opacity: 1;
-  border: 1px solid var(--accent-color);
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-@media (max-width: 767px) {
-  .testimonials .testimonial-wrap {
-    padding-left: 0;
+@media (max-width: 991px) {
+  .kcc-principle {
+    min-height: 320px;
+    background-position: right 24px center, right 18px center;
+    background-size: auto, 170px auto;
   }
 
-  .testimonials .testimonials-carousel,
-  .testimonials .testimonials-slider {
-    overflow: hidden;
+  .principle-content {
+    max-width: 72%;
+  }
+}
+
+@media (max-width: 576px) {
+  .kcc-principle {
+    min-height: 390px;
+    align-items: flex-end;
+    background-position: center 30px, center 26px;
+    background-size: auto, 150px auto;
   }
 
-  .testimonials .testimonial-item {
-    padding: 30px;
-    margin: 15px;
+  .kcc-principle::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(16, 21, 76, 1) 58%, rgba(16, 21, 76, 0.72) 100%);
   }
 
-  .testimonials .testimonial-item .testimonial-img {
-    position: static;
-    left: auto;
+  .principle-content {
+    max-width: 100%;
+    padding: 28px 24px;
   }
 }
 
