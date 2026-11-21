@@ -878,6 +878,157 @@ section,
   text-transform: uppercase;
 }
 
+.admissions {
+  --admissions-navy: #10154c;
+}
+
+.admissions .section-title {
+  text-align: center;
+}
+
+.admission-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid color-mix(in srgb, var(--heading-color), transparent 82%);
+}
+
+.admission-step {
+  min-height: 190px;
+  padding: 30px 28px;
+  border-right: 1px solid color-mix(in srgb, var(--heading-color), transparent 82%);
+  border-bottom: 1px solid color-mix(in srgb, var(--heading-color), transparent 82%);
+}
+
+.admission-step:last-child {
+  border-right: 0;
+}
+
+.admission-step .step-number {
+  display: block;
+  color: var(--accent-color);
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 22px;
+}
+
+.admission-step h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.admission-step p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.requirements-panel {
+  height: 100%;
+  padding: 34px;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--heading-color), transparent 88%);
+}
+
+.requirements-panel .section-title {
+  padding-bottom: 28px;
+}
+
+.requirements-panel .section-title p {
+  font-size: 28px;
+}
+
+.requirements-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.requirements-list li {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px 10px 0;
+  border-top: 1px solid color-mix(in srgb, var(--heading-color), transparent 88%);
+}
+
+.requirements-list li span {
+  color: #c79a16;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.enrollment-panel {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  color: var(--contrast-color);
+  background: var(--admissions-navy);
+}
+
+.enrollment-panel .status-label {
+  color: var(--accent-color);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.enrollment-panel h3 {
+  color: var(--contrast-color);
+  margin: 12px 0 14px;
+}
+
+.enrollment-panel p {
+  color: color-mix(in srgb, var(--contrast-color), transparent 18%);
+  line-height: 1.7;
+}
+
+.enrollment-panel .btn-getstarted {
+  align-self: flex-start;
+  margin-top: 10px;
+  color: var(--admissions-navy);
+  background: var(--accent-color);
+}
+
+.enrollment-panel .online-link {
+  color: var(--contrast-color);
+  margin-top: 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .admission-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admission-step:nth-child(2) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .admission-steps,
+  .requirements-list {
+    grid-template-columns: 1fr;
+  }
+
+  .admission-step,
+  .admission-step:nth-child(2) {
+    border-right: 0;
+  }
+
+  .requirements-panel,
+  .enrollment-panel {
+    padding: 28px 22px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
