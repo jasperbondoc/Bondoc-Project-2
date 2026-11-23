@@ -231,19 +231,22 @@ h6 {
 
 .header .logo {
   line-height: 1;
+  min-width: 0;
 }
 
 .header .logo img {
   max-height: 36px;
   margin-right: 8px;
+  flex-shrink: 0;
 }
 
 .header .logo h1 {
   font-weight: 700;
-  font-size: 30px;
+  font-size: clamp(14px, 1.35vw, 24px);
   margin: 0;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
   color: var(--accent-color);
 }
 
